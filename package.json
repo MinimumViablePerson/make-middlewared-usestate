@@ -1,6 +1,6 @@
 {
   "name": "@mvps/make-middlewared-usereducer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a version of useReducer with an indefinite number of  middleware functions applied.",
   "main": "makeMiddlewaredUseReducer.js",
   "peerDependencies": {

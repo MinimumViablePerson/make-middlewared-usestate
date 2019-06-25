@@ -1,11 +1,27 @@
 {
   "name": "@mvps/make-middlewared-usereducer",
   "version": "1.0.0",
-  "private": false,
-  "entry": "makeMiddlewaredUseReducer.js",
+  "description": "Create a version of useReducer with an indefinite number of  middleware functions applied.",
+  "main": "makeMiddlewaredUseReducer.js",
   "peerDependencies": {
     "react": "^16.8.x",
     "react-dom": "^16.8.x"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinimumViablePerson/use-middlewared-usereducer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MinimumViablePerson/use-middlewared-usereducer/issues"
+  },
+  "homepage": "https://github.com/MinimumViablePerson/use-middlewared-usereducer#readme",
+  "keywords": [
+    "hook",
+    "react",
+    "usereducer",
+    "reducer",
+    "middleware"
+  ],
+  "license": "ISC",
   "author": "Nicolas Marcora"
 }

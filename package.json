@@ -1,0 +1,11 @@
+{
+  "name": "@mvps/make-middlewared-usereducer",
+  "version": "1.0.0",
+  "private": false,
+  "entry": "makeMiddlewaredUseReducer.js",
+  "peerDependencies": {
+    "react": "^16.8.x",
+    "react-dom": "^16.8.x"
+  },
+  "author": "Nicolas Marcora"
+}

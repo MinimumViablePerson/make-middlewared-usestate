@@ -66,7 +66,19 @@ const App = () => {
     <button onClick={up}>+</button>
   </div>
 }
+```
 
+Adding mutliple middlewares is just as easy!
+
+```js
+import makeMiddlewaredUseReducer from '@mvps/make-middlewared-usereducer'
+
+import logger from '../middlewares/logger'
+import alerter from '../middlewares/alerter'
+import metaAdder from '../middlewares/metaAdder'
+import apiCaller from '../middlewares/apiCaller'
+
+export default makeMiddlewaredReducer(alerter, metaAdder, apiCaller, logger)
 ```
 
 Want to see it in action? Check out the [live demo!][live-demo]

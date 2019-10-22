@@ -7,7 +7,7 @@ Create a version of useReducer with an indefinite number of  middleware function
 ## How to install
 
 ```bash
-npm i @mvps@make-middlewared-usereducer
+npm i @mvps/make-middlewared-usestate
 ```
 
 ## How to use
@@ -16,24 +16,26 @@ npm i @mvps@make-middlewared-usereducer
 
 ```js
 // logger.js
-export default ([state, dispatch]) => {
-  const newDispatch = action => {
-    console.log(action)
-    return dispatch(action)
+export default ([state, setState]) => {
+  const newSetState = state => {
+    console.log(state)
+    return setState(state)
   }
-  return [state, newDispatch]
+  return [state, newSetState]
 }
 ```
 
-After you've created some middleware functions, you can create your custom useReducer with an indefinite number of middlewares applied:
+After you've created some middleware functions, you can create your custom useState with an indefinite number of middlewares applied:
 
 ```js
-// useLoggedReducer.js
+// useLoggedAndAPICallingReducer.js
 import makeMiddlewaredUseReducer from '@mvps/make-middlewared-usereducer'
 
-import logger from '../middlewares/logger'
+import consoleLogger from '../middlewares/consoleLogger'
+import eventLogger from '../middlewares/eventLogger'
+import APICaller from '../middlewares/APICaller'
 
-export default makeMiddlewaredUseReducer(logger)
+export default makeMiddlewaredUseReducer(consoleLogger, eventLogger, APICaller)
 ```
 
 Then, in any component:
@@ -42,23 +44,12 @@ Then, in any component:
 // App.js
 import React from 'react'
 
-import useLoggedReducer from './hooks/useLoggedReducer'
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case 'COUNTER_UP':
-      return state + 1
-    case 'COUNTER_DOWN':
-      return state - 1 || 1
-    default:
-      return state
-  }
-}
+import useState from './hooks/useLoggedAndAPICallingReducer'
 
 const App = () => {
-  const [count, dispatch] = useLoggedReducer(reducer, 1)
-  const up = () => dispatch({ type: 'COUNTER_UP' })
-  const down = () => dispatch({ type: 'COUNTER_DOWN' })
+  const [count, setCount] = useState(0)
+  const up = () => setCount(count + 1)
+  const down = () => setCount(count - 1)
 
   return <div>
     <h1>{count}</h1>
@@ -68,21 +59,8 @@ const App = () => {
 }
 ```
 
-Adding mutliple middlewares is just as easy!
-
-```js
-import makeMiddlewaredUseReducer from '@mvps/make-middlewared-usereducer'
-
-import logger from '../middlewares/logger'
-import alerter from '../middlewares/alerter'
-import metaAdder from '../middlewares/metaAdder'
-import apiCaller from '../middlewares/apiCaller'
-
-export default makeMiddlewaredReducer(alerter, metaAdder, apiCaller, logger)
-```
-
 Want to see it in action? Check out the [live demo!][live-demo]
 
 Have fun!
 
-[live-demo]: https://stackblitz.com/edit/make-middlewared-reducer?file=App.js
+[live-demo]: https://stackblitz.com/edit/make-middlewared-state

@@ -1,25 +1,25 @@
 {
-  "name": "@mvps/make-middlewared-usereducer",
+  "name": "@mvps/make-middlewared-usestate",
   "version": "1.0.2",
-  "description": "Create a version of useReducer with an indefinite number of  middleware functions applied.",
-  "main": "makeMiddlewaredUseReducer.js",
+  "description": "Create a version of usestate with an indefinite number of  middleware functions applied.",
+  "main": "makeMiddlewaredUseState.js",
   "peerDependencies": {
     "react": "^16.8.x",
     "react-dom": "^16.8.x"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MinimumViablePerson/make-middlewared-usereducer.git"
+    "url": "git+https://github.com/MinimumViablePerson/make-middlewared-usestate.git"
   },
   "bugs": {
-    "url": "https://github.com/MinimumViablePerson/make-middlewared-usereducer/issues"
+    "url": "https://github.com/MinimumViablePerson/make-middlewared-usestate/issues"
   },
-  "homepage": "https://github.com/MinimumViablePerson/make-middlewared-usereducer#readme",
+  "homepage": "https://github.com/MinimumViablePerson/make-middlewared-usestate#readme",
   "keywords": [
     "hook",
     "react",
-    "usereducer",
-    "reducer",
+    "usestate",
+    "state",
     "middleware"
   ],
   "license": "ISC",

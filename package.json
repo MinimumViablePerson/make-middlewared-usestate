@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MinimumViablePerson/use-middlewared-usereducer.git"
+    "url": "git+https://github.com/MinimumViablePerson/make-middlewared-usereducer.git"
   },
   "bugs": {
-    "url": "https://github.com/MinimumViablePerson/use-middlewared-usereducer/issues"
+    "url": "https://github.com/MinimumViablePerson/make-middlewared-usereducer/issues"
   },
-  "homepage": "https://github.com/MinimumViablePerson/use-middlewared-usereducer#readme",
+  "homepage": "https://github.com/MinimumViablePerson/make-middlewared-usereducer#readme",
   "keywords": [
     "hook",
     "react",

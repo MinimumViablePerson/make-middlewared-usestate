@@ -63,4 +63,4 @@ Want to see it in action? Check out the [live demo!][live-demo]
 
 Have fun!
 
-[live-demo]: https://stackblitz.com/edit/make-middlewared-state
+[live-demo]: https://codesandbox.io/s/use-middlewared-usestate-x1v6k

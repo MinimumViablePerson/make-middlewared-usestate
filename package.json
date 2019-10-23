@@ -1,6 +1,6 @@
 {
   "name": "@mvps/make-middlewared-usestate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a version of usestate with an indefinite number of  middleware functions applied.",
   "main": "makeMiddlewaredUseState.js",
   "peerDependencies": {

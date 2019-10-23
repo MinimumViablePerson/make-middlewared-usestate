@@ -1,6 +1,6 @@
-# Make Middlewared useReducer
+# Make Middlewared useState
 
-Create a version of useReducer with an indefinite number of  middleware functions applied.
+Create a version of useState with an indefinite number of  middleware functions applied.
 
 [Live demo!][live-demo]
 
@@ -28,14 +28,14 @@ export default ([state, setState]) => {
 After you've created some middleware functions, you can create your custom useState with an indefinite number of middlewares applied:
 
 ```js
-// useLoggedAndAPICallingReducer.js
-import makeMiddlewaredUseReducer from '@mvps/make-middlewared-usereducer'
+// useLoggedAndAPICallingState.js
+import makeMiddlewaredUseState from '@mvps/make-middlewared-usestate'
 
 import consoleLogger from '../middlewares/consoleLogger'
 import eventLogger from '../middlewares/eventLogger'
 import APICaller from '../middlewares/APICaller'
 
-export default makeMiddlewaredUseReducer(consoleLogger, eventLogger, APICaller)
+export default makeMiddlewaredUseState(consoleLogger, eventLogger, APICaller)
 ```
 
 Then, in any component:
@@ -44,7 +44,7 @@ Then, in any component:
 // App.js
 import React from 'react'
 
-import useState from './hooks/useLoggedAndAPICallingReducer'
+import useState from './hooks/useLoggedAndAPICallingState'
 
 const App = () => {
   const [count, setCount] = useState(0)
